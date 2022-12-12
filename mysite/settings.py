@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-mtb(8i8dnyelpdow&@w*lv&rkdjj^k@#!1*vz7i_9p6+qk670@
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS=["portafolio-production-5d11.up.railway.app"]
+
 
 # Application definition
 
@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'myapp.apps.MyappConfig',
     'appuser.apps.AppuserConfig',
 ]
+
+CSRF_TRUSTED_ORIGINS=["https://portafolio-production-5d11.up.railway.app"]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
