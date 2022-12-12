@@ -1,0 +1,34 @@
+{% extends 'baseUser.html' %}
+{% block content %}
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h1 class="text-center display-3 py-5">Proyectos</h1>
+
+            <ul class="list-group">
+                {% for proyecto in proyectos %}
+                <a class="list-group-item" href="{% url 'proyecto_detail' proyecto.id %}">
+                    <header class="d-flex justify-content-between">
+                        <h1 class="fw-bold">{{ proyecto.title }}</h1>
+                        <p>~{{ proyecto.user.username }}</p>
+                    </header>
+                    
+                    <img src="{{ proyecto.photo }}"
+                    width="60%"
+                    height="auto">
+
+                    <p>{{ proyecto.description }}</p>
+                    <p>Tags: {{ proyecto.tags }}</p>
+                </a>
+                <p> 
+                    <a href="{{ proyecto.urlgithub }}">🔗Github</a>
+                </p>
+                {% endfor %}
+
+            </ul>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
