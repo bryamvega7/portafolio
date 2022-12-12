@@ -4,7 +4,7 @@
 <main class="container">
     <div class="row">
         <div class="col-md-4 offset-md-4 py-5">
-            <form action="/proyectos/create/" method="POST" class="card card-body">
+            <form action="{% url 'create_proyecto' %}" method="POST" class="card card-body">
                 <h1>Crear Proyecto</h1>
                 {{error}}
                 {% csrf_token %}
