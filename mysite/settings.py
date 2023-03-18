@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'appuser.apps.AppuserConfig',
 ]
 
-CSRF_TRUSTED_ORIGINS=["https://portafolio-production-5d11.up.railway.app"]
+CSRF_TRUSTED_ORIGINS=["https://portafolio-production-bfb1.up.railway.app"]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
